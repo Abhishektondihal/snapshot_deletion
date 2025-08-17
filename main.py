@@ -60,3 +60,4 @@ def old_snapshot(event, context):
     print(f"✅ Deleted {len(deleted_snapshots)} snapshots in project '{project_id}'")
     if deleted_snapshots:
         print(json.dumps(deleted_snapshots, indent=2))
+
