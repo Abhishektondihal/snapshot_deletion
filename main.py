@@ -7,7 +7,7 @@ def old_snapshot(event, context):
     """Triggered by a Pub/Sub message to delete old snapshots in a GCP project."""
 
     # Default values (can be overridden from Pub/Sub message)
-    DAYS_THRESHOLD = 180
+    DAYS_THRESHOLD = -1
     project_id = None
 
     # Parse data from Pub/Sub message
@@ -60,5 +60,3 @@ def old_snapshot(event, context):
     print(f"✅ Deleted {len(deleted_snapshots)} snapshots in project '{project_id}'")
     if deleted_snapshots:
         print(json.dumps(deleted_snapshots, indent=2))
-
-
