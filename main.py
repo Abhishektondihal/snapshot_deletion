@@ -61,3 +61,4 @@ def old_snapshot(event, context):
     if deleted_snapshots:
         print(json.dumps(deleted_snapshots, indent=2))
 
+
